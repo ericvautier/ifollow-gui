@@ -18,6 +18,7 @@ import com.google.gwt.user.client.ui.Label;
 public class GearsTest implements EntryPoint {
 	
 	private final String db_name = "ifollow_test_fts";
+	private final String[] keywords = new String[] { "test-driven", "vautier", "unit-test", "mock" };
 	
 	private Database db;
 	private TextBox countField;
@@ -123,9 +124,8 @@ public class GearsTest implements EntryPoint {
 	 * @return	A random word.
 	 */
 	private String randomWord() {
-		String[] words = { "test-driven", "vautier", "unit-test", "mock" };
 		if ( Random.nextInt( 100 ) > 95 ) {
-			return words[ Random.nextInt(words.length) ];
+			return keywords[ Random.nextInt(keywords.length) ];
 		} else {
 			String s = "";
 			for ( int i=0; i<Random.nextInt(14); i++) {
